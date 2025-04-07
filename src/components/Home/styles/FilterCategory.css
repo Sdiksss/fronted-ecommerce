@@ -1,0 +1,26 @@
+.filterCategory__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.filterCategory__ul {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    gap: 1em;
+}
+
+.filterCategory__ul__li {
+    background: white;
+    padding: 0.2em 1.5em;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Avenir', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.filterCategory__ul__li:hover {
+    background: rgb(245, 245, 245);
+}

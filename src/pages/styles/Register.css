@@ -1,0 +1,77 @@
+.register-container {
+    background: #ebebebe5;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 1.5em 0.5em;
+    gap: 0.1em;
+}
+
+.register-account {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    text-align: center;
+}
+
+.register-form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.register-form__input-div,
+.register-form__gender-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    
+}
+
+.register-form__input-div label,
+.register-form__gender-div label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-right: auto
+}
+
+.register-form__input-div input,
+.register-form__gender-div input {
+    padding: 0.2em 1em;
+    height: 30px;
+    border-radius: 6px;
+    border: #bec2ca solid 1px;
+    font-size: 1rem;
+}
+
+.register-form__gender-div div {
+    display: flex;
+    gap: 10px;
+}
+
+.register-form__gender-div div label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.register-form__btn {
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+    background: #ec0000;
+    color: white;
+    font-weight: 800;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.register-form__btn:hover {
+    background: #e60000;
+}

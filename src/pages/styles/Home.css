@@ -1,0 +1,39 @@
+.homePage {
+    max-width: 1300px;
+}
+
+
+.products__container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+    min-width: 100%;
+    width: 100%;
+    gap: 0.5em;
+    padding: 1em 0;
+}
+ /* @media (min-width: 350px) {
+    .products__container {
+        grid-template-columns: repeat(2, 150px);
+    }
+}
+
+
+@media (min-width: 850px) {
+    .products__container{
+        grid-template-columns: repeat(4, 200px);
+    }
+}
+
+@media (min-width: 1080px) {
+    .products__container {
+        grid-template-columns: repeat(4, 200px);
+    }
+}
+
+@media (min-width: 1400px) {
+    .products__container {
+        grid-template-columns: repeat(5, 200px);
+    }
+}  */

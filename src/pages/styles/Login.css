@@ -1,0 +1,105 @@
+.login-container {
+    background: #ebebebe5;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 1.5em 0.5em;
+
+    gap: 0.5em;
+}
+
+.login-account {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    text-align: center;
+}
+
+.login-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background: white;
+    border-radius: 6px;
+    border: #bec2ca solid 1px;
+    cursor: pointer;
+
+
+}
+
+.line-continue {
+    width: 100%;
+    position: relative;
+}
+
+.line-continue::before, .line-continue::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%; /* Ajusta el tamaño de las líneas */
+    height: 1px; /* Grosor de la línea */
+    background-color: #817777; /* Color de las líneas */
+    transform: translateY(-50%); /* Centra verticalmente las líneas */
+}
+
+.line-continue::before {
+    left: 0;
+}
+
+.line-continue::after {
+    right: 0;
+}
+
+.line-continue span {
+    background-color: #ebebebe5; 
+    padding: 0 1rem; 
+    z-index: 1;
+    position: relative; 
+}
+
+
+
+
+
+.login-form {
+    width: 300px;
+
+}
+.login-form__email-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.login-form__pass-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.login-form__email-input {
+    padding: 0.2em 1em;
+    height: 30px;
+    border-radius: 6px;
+    border: #bec2ca solid 1px;
+}
+
+.login-form__btn {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    background: #ec0000;
+    color: white;
+    font-weight: 800;
+    font-size: 1em;
+
+}
