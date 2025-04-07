@@ -6,7 +6,8 @@ import './styles/FilterCategory.css'
 
 const FilterCategory = () => {
 
-    const baseUrl = `http://localhost:8080/categories`
+    const baseUrl = 'https://backend-ecommerce-ukji.onrender.com/categories'
+    //`http://localhost:8080/categories`
     const [categories, getAllcategories] = useFetch(baseUrl)
 
     useEffect(() => {
@@ -17,7 +18,8 @@ const FilterCategory = () => {
 
     const handleFilterCategory = (id) => {
         if (id) {
-            const url = `http://localhost:8080/products?categoryId=${id}`
+            const url = `https://backend-ecommerce-ukji.onrender.com/products?categoryId=${id}`
+            //`http://localhost:8080/products?categoryId=${id}`
             dispatch(getAllProductsThunk(url))
         } else {
             dispatch(getAllProductsThunk())

@@ -11,7 +11,8 @@ const usePurchase = () => {
 
     const [purchases, setPurchases] = useState()
 
-    const url = 'http://localhost:8080/purchaseItems'
+    const url = 'https://backend-ecommerce-ukji.onrender.com/purchaseItems'
+    //'http://localhost:8080/purchaseItems'
 
     const getAllPurchases = () => {
         axios.get(url, getConfigAuth())

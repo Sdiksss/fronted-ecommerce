@@ -10,7 +10,9 @@ const ProductId = () => {
 
    const {id}  = useParams()
 
-   const url = `http://localhost:8080/products/${id}`
+   const url = `https://backend-ecommerce-ukji.onrender.com/products/${id}`
+   
+  // `http://localhost:8080/products/${id}`
 
   const [product, getProductById] = useFetch(url)
 

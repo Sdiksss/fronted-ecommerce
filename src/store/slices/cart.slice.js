@@ -21,7 +21,8 @@ export default cartSlice.reducer;
 
 //thunks 
 
-const baseUrl = `http://localhost:8080/cartItems`
+const baseUrl = 'https://backend-ecommerce-ukji.onrender.com/cartItems'
+//`http://localhost:8080/cartItems`
 
 export const getCartThunk = () =>  dispatch => {
     const url = baseUrl

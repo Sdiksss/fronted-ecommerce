@@ -15,7 +15,9 @@ export default productsSlice.reducer;
 
 //Peticion
 
-const defaultUrl = `http://localhost:8080/products`
+const defaultUrl = 'https://backend-ecommerce-ukji.onrender.com/products'
+
+//`http://localhost:8080/products` 
 
 export const getAllProductsThunk = (url = defaultUrl) => dispatch => {
     axios.get(url)
