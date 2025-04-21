@@ -23,6 +23,9 @@ const Login = () => {
 
     return (
         <div className='login-container'>
+
+
+        <div className='login-body'>
             <div className='login-account'>
                 <h2>Welcome back</h2>
                 <p>Login with your Google account</p>
@@ -52,6 +55,8 @@ const Login = () => {
                 <p>Dont have an account?</p> <Link to={'/register'} > Sign up</Link>
 
             </div>
+        </div>
+
         </div>
     )
 }

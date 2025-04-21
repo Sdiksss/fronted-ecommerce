@@ -1,19 +1,22 @@
 .filterCategory__container {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 1em;
+    box-sizing: border-box;
+    gap: 0.5em;
 }
 
 .filterCategory__ul {
-    justify-content: space-evenly;
+    flex-direction: column;
     display: flex;
     width: 100%;
     gap: 1em;
+    font-size: 16px;
 }
 
 .filterCategory__ul__li {
     background: white;
-    padding: 0.2em 1.5em;
     border-radius: 12px;
     cursor: pointer;
     font-family: 'Avenir', sans-serif;

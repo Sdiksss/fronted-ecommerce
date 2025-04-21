@@ -25,6 +25,7 @@ const FilterPrice = ({ setPrice, PriceMinMax }) => {
 
     return (
         <section className="filter-price">
+            <h4>Price</h4>
             <form onSubmit={handleSubmit(submit)} className="filter-price__form">
                 <div className="filter-price__input">
                     <label htmlFor="from">From</label>

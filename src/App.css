@@ -1,22 +1,26 @@
+.container {
+  background: #f800008c;  
+  width: 100vw;
+  }
+
+
 .body {
-    width: 100%;
     background: #cecbcb8c;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 6em;
+    max-width: 1300px;
     height: 100vh;
+ margin: 0 auto;
 }
 
-.container {
-}
+
 
 
 
 /* app.css */
 
 html, body {
-    margin: 0;
+  margin: 0;
     padding: 0;
     box-sizing: border-box;
   }

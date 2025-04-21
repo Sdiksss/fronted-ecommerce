@@ -8,6 +8,10 @@
     border-radius: 12px;
     padding: 1.5em 0.5em;
     gap: 0.1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .register-account {
@@ -31,7 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    
+
 }
 
 .register-form__input-div label,

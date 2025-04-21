@@ -28,13 +28,10 @@ const FilterCategory = () => {
 
     return (
         <article className='filterCategory__container'>
-            {/* <h3>
-                Categories
-            </h3> */}
+            <h4>Categories</h4>
             <ul className='filterCategory__ul'>
                 <li className='filterCategory__ul__li'
                     onClick={() => handleFilterCategory()}>
-                    <i className='bx bx-list-ul' style={{fontSize: '1.3em'}} ></i>
                     All categories
                 </li>
                 {categories?.map(category => (

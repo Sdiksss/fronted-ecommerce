@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './styles/Header.css'
 import FilterCategory from '../FilterCategory'
@@ -8,6 +8,11 @@ const Header = ({ inputValue, handleSearchName }) => {
     const location = useLocation()
     const isHome = location.pathname === '/'
 
+
+    //login hamburger menu
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    console.log(menuOpen)
 
     return (
         <header className='header-container'>
@@ -23,7 +28,9 @@ const Header = ({ inputValue, handleSearchName }) => {
 
 
                 <nav className='header-nav'>
-                    <ul className='header-nav__ul'>
+                    <ul className={`header-nav__ul ${menuOpen? 'active' : ''}`}
+                    
+                    >
                         <li>
                             <Link to='/login'>Login</Link>
                         </li>
@@ -41,6 +48,10 @@ const Header = ({ inputValue, handleSearchName }) => {
                             <Link to='/purchases'>Purchases</Link>
                         </li>
                     </ul>
+
+                    <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)} >
+                        <i className='bx bx-menu'></i>
+                    </div>
                 </nav>
             </div>
             {
@@ -50,7 +61,7 @@ const Header = ({ inputValue, handleSearchName }) => {
                     </div>
                 )
             }
-            
+
         </header>
     )
 }

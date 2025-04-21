@@ -21,8 +21,8 @@
 .product__header {
     display: flex;
     justify-content: center;
-    height: 150px;
     width: 150px;
+    aspect-ratio: 1;
     background: goldenrod;
     border-bottom: 1px solid black;
     margin-bottom: 0.2em;
@@ -95,7 +95,7 @@
 
 
 
-@media (min-width: 350px) {
+@media (max-width: 450px) {
     .product {
         width: 150px;
     }

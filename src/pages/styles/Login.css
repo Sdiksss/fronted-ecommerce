@@ -1,4 +1,5 @@
 .login-container {
+    margin: 0 auto;
     background: #ebebebe5;
     width: 400px;
     display: flex;
@@ -9,6 +10,10 @@
     padding: 1.5em 0.5em;
 
     gap: 0.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .login-account {
@@ -39,14 +44,19 @@
     position: relative;
 }
 
-.line-continue::before, .line-continue::after {
+.line-continue::before,
+.line-continue::after {
     content: "";
     position: absolute;
     top: 50%;
-    width: 40%; /* Ajusta el tamaño de las líneas */
-    height: 1px; /* Grosor de la línea */
-    background-color: #817777; /* Color de las líneas */
-    transform: translateY(-50%); /* Centra verticalmente las líneas */
+    width: 40%;
+    /* Ajusta el tamaño de las líneas */
+    height: 1px;
+    /* Grosor de la línea */
+    background-color: #817777;
+    /* Color de las líneas */
+    transform: translateY(-50%);
+    /* Centra verticalmente las líneas */
 }
 
 .line-continue::before {
@@ -58,10 +68,10 @@
 }
 
 .line-continue span {
-    background-color: #ebebebe5; 
-    padding: 0 1rem; 
+    background-color: #ebebebe5;
+    padding: 0 1rem;
     z-index: 1;
-    position: relative; 
+    position: relative;
 }
 
 
@@ -72,6 +82,7 @@
     width: 300px;
 
 }
+
 .login-form__email-div {
     display: flex;
     flex-direction: column;
