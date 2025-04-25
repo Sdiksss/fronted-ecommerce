@@ -1,16 +1,11 @@
-.container {
-  background: #f800008c;  
-  width: 100vw;
-  }
+.container {}
 
 
 .body {
-    background: #cecbcb8c;
-    display: flex;
-    flex-direction: column;
-    max-width: 1300px;
-    height: 100vh;
- margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 
@@ -19,25 +14,30 @@
 
 /* app.css */
 
-html, body {
+html,
+body {
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Reset de encabezados */
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
-  
-  /* Ejemplo de estilo personalizado para h1 y h4 */
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h4 {
-    font-size: 1rem;
-  }
-  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset de encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Ejemplo de estilo personalizado para h1 y h4 */
+h1 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}

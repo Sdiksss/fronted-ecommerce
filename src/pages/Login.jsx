@@ -9,7 +9,7 @@ const Login = () => {
 
     const { register, handleSubmit, reset } = useForm()
 
-    const { loginUser } = useAuthentication()
+    const { loginUser, isLoggedIn } = useAuthentication()
 
     const submit = data => {
         loginUser(data)

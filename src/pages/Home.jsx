@@ -4,6 +4,7 @@ import CardProduct from '../components/Home/CardProduct'
 import './styles/Home.css'
 import FilterPrice from '../components/Home/FilterPrice'
 import FilterCategory from '../components/Home/FilterCategory'
+import MainSlider from '../components/Home/MainSlider'
 const Home = ({ inputValue }) => {
 
     const productsGlobal = useSelector(states => states.productsGlobal)
@@ -43,13 +44,16 @@ const Home = ({ inputValue }) => {
     return (
         <>
             <div className='homePage'>
-
                 <div className='filters-menu'>
                     <button className='main-filters'
                         onClick={handleMenuFilter}>
                         <i className='bx bx-category-alt'></i> Filtros
                     </button>
                 </div>
+
+                <MainSlider />
+
+
 
                 <div className='Home-products'>
                     <aside className={`filters ${isMenuOpen ? 'show' : ''}`}>

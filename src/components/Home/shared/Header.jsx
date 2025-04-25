@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation,  } from 'react-router-dom'
 import './styles/Header.css'
 import FilterCategory from '../FilterCategory'
+import useAuthentication from '../../../hooks/useAuthentication'
 
 const Header = ({ inputValue, handleSearchName }) => {
 
     const location = useLocation()
     const isHome = location.pathname === '/'
 
+    const { isLoggedIn, logout } = useAuthentication()
+
+    const logged = isLoggedIn()
 
     //login hamburger menu
     const [menuOpen, setMenuOpen] = useState(false)
@@ -28,24 +32,31 @@ const Header = ({ inputValue, handleSearchName }) => {
 
 
                 <nav className='header-nav'>
-                    <ul className={`header-nav__ul ${menuOpen? 'active' : ''}`}
-                    
+                    <ul className={`header-nav__ul ${menuOpen ? 'active' : ''}`}
+
                     >
-                        <li>
-                            <Link to='/login'>Login</Link>
-                        </li>
-                        <li>
-                            <Link to='/register'>Register</Link>
-                        </li>
+                        {
+                            logged ? <button onClick={logout}>logut</button> :
+                                <>
+                                    <li>
+                                        <Link to='/login'>Login</Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/register'>Register</Link>
+                                    </li>
+                                </>
+
+                        }
 
                         <li>
+                            <Link to='/cart'>
+
+                           Carrito 
+                            
+                            </Link>
+                        </li>
+                        <li>
                             <Link to='/purchases'>Compras</Link>
-                        </li>
-                        <li>
-                            <Link to='/cart'><i className='bx bxs-cart'></i></Link>
-                        </li>
-                        <li>
-                            <Link to='/purchases'>Purchases</Link>
                         </li>
                     </ul>
 

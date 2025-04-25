@@ -30,8 +30,16 @@ const CardProduct = ({ product }) => {
             </header>
 
             <section className='product__section'>
-                <h4 className='product__subtitle'>Product.brand to finish</h4>
+                
                 <h3 className='product__title'>{product.title}</h3>
+                <div>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star-half' ></i> <span>4.5</span> 
+        
+                </div>
             </section>
 
             <div className='product__price'>

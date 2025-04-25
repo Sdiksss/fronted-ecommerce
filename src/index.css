@@ -1,9 +1,14 @@
-* app.css */
+:root {
+  --font-primary: "Roboto", sans-serif ;
+}
+
+
 
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-primary);
   }
   
   /* Reset de encabezados */
@@ -13,6 +18,7 @@ html, body {
     font-weight: normal;
     margin-bottom: 0;
     margin-top: 0;
+    font-family: var(--font-primary);
   }
   
   button {
@@ -20,6 +26,7 @@ html, body {
     font-family: inherit;
     cursor: pointer;
     box-sizing: border-box;
+    font-family: var(--font-primary);
   }
   img {
     display: block;
@@ -27,6 +34,7 @@ html, body {
   }
   a {
     text-decoration: none;
+    font-family: var(--font-primary);
   }
 
   input, button {

@@ -1,0 +1,99 @@
+.header-slider {
+  width: 100%;
+  position: relative;
+  height: 170px;
+  background: rgb(145, 145, 235);
+  box-sizing: border-box;
+}
+
+.slide {
+  width: 100%;
+  opacity: 0;
+  transition: ease 500ms;
+  position: absolute;
+  padding: 1em;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+
+.slide.active {
+  opacity: 1;
+  transition: ease 500ms;
+  pointer-events: auto;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em 2.5em;
+}
+
+
+
+.cta-btn {
+  background: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-left: auto;
+  padding: 0.1em 0.5em;
+  border-radius: 0.2em;
+}
+
+.cta-btn:hover {
+  background: grey;
+  color: white;
+}
+
+
+.nav-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+
+.btn-left {
+  left: 1.5em;
+  
+}
+
+.btn-right {
+  right: 1.5em;
+  bottom: 50%;
+}
+
+.indicators {
+  display: inline-flex;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  gap: 4px;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: gray;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dot.active {
+ background: black;
+ transform: scale(1.2);
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}

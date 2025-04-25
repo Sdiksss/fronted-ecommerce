@@ -1,7 +1,8 @@
 .homePage {
     display: flex;
     flex-direction: column;
-    padding: 4em 0 0 0 ;
+    box-sizing: border-box;
+    padding: 60px 0 0 0 ;
 }
 
 .Home-products {
@@ -13,37 +14,18 @@
 
 .products__container {
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 0.5em;
     padding: 1em 1em;
-    width: 100%;           /* permite que se reduzca en pantallas pequeñas */
-    max-width: 1000px;     /* nunca será más ancho de 1000px */
-    min-height: 400px;     /* para que tenga forma visible antes de cargar contenido */
+    width: 100%;                 
     margin: 0 auto;
 }
 
-.filters-menu {
-    border-radius: 10px;
-    margin: 0 1em;
-}
-
-.main-filters {
-    border-radius: 10px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-
-
 .filters {
     width: 220px;
-    padding: 1em 0;
-    margin: 1em;
+    margin-top: 1em;
+    padding:1em 0 0 0;
     position: sticky;
     height: fit-content;
     top: 3em;
@@ -52,9 +34,31 @@
     flex-direction: column;
     align-items: center;
     background: white;
-    border-radius: 0.5em;
+    border-radius: 0.2em;
     
 }
+
+.filters-menu {
+    position: sticky;
+    top: 60px;
+    z-index: 5;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 2px 1em 5px;
+}
+
+.main-filters {
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    
+}
+
+
+
 
 .filters.show {
     transform: translateX(0);
@@ -92,27 +96,3 @@
 }
 
 
-/* @media (min-width: 350px) {
-    .products__container {
-        grid-template-columns: repeat(2, 150px);
-    }
-}
-
-
-@media (min-width: 850px) {
-    .products__container{
-        grid-template-columns: repeat(4, 200px);
-    }
-}
-
-@media (min-width: 1080px) {
-    .products__container {
-        grid-template-columns: repeat(4, 200px);
-    }
-}
-
-@media (min-width: 1400px) {
-    .products__container {
-        grid-template-columns: repeat(5, 200px);
-    }
-}  */
