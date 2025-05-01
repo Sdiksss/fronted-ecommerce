@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation,  } from 'react-router-dom'
+import { Link, useLocation, } from 'react-router-dom'
 import './styles/Header.css'
 import FilterCategory from '../FilterCategory'
 import useAuthentication from '../../../hooks/useAuthentication'
@@ -44,20 +44,26 @@ const Header = ({ inputValue, handleSearchName }) => {
                                     <li>
                                         <Link to='/register'>Register</Link>
                                     </li>
+                                    
+                                    
                                 </>
-
                         }
+                        {
+                            logged && (
+                                <>
+                                   <li>
+                                        <Link to='/cart'>Carrito
 
-                        <li>
-                            <Link to='/cart'>
-
-                           Carrito 
-                            
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/purchases'>Compras</Link>
-                        </li>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/purchases'>Compras</Link>
+                                    </li>
+                                </>
+                            )
+                        }
+                        
+                        
                     </ul>
 
                     <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)} >
