@@ -36,7 +36,7 @@ const Header = ({ inputValue, handleSearchName }) => {
 
                     >
                         {
-                            logged ? <button onClick={logout}>logut</button> :
+                            logged ? <li className='logout' onClick={logout}>logut</li> :
                                 <>
                                     <li>
                                         <Link to='/login'>Login</Link>

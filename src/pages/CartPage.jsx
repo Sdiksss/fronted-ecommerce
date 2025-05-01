@@ -3,6 +3,7 @@ import {  useSelector } from 'react-redux'
 
 import CartElement from '../components/cart/CartElement'
 import usePurchase from '../hooks/usePurchase'
+import './styles/CartPage.css'
 
 const CartPage = () => {
 
@@ -22,9 +23,9 @@ const {purchases, getAllPurchases, makePurchases} = usePurchase();
 
   }
   return (
-    <section>
+    <section className='carPage-body'>
 
-      <div>
+      <div className='cartPage-products'>
         {cart?.map(productCart => (
           <CartElement
             key={productCart.id}

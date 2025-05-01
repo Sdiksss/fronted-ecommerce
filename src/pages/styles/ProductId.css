@@ -1,0 +1,24 @@
+.productId {
+    padding: 60px 1em ;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.productId__section{
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+
+}
+
+
+@media (max-width: 800px) {
+    .productId__section{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

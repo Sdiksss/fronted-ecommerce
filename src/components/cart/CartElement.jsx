@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteCartThunk } from '../../store/slices/cart.slice'
+import './styles/CartElement.css'
 
 const CartElement = ({ productCart }) => {
 
@@ -13,7 +14,7 @@ const CartElement = ({ productCart }) => {
     console.log(productCart)
 
     return (
-        <article>
+        <article className='cartPage-product'>
             <header>
                 <img src={productCart?.product.images[0].url} alt="" />
             </header>

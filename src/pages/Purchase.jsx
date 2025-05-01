@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import usePurchase from '../hooks/usePurchase'
 import PurchaseCard from '../components/Purchase/PurchaseCard'
+import './styles/Purchase.css'
 
 const Purchase = () => {
 
@@ -11,7 +12,7 @@ const Purchase = () => {
     },[])
 
     return (
-    <div>
+    <div className='purchase'>
         <h2>Purchases</h2>
         <div>
             {

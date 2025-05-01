@@ -5,13 +5,14 @@ import useFetch from '../hooks/useFetch'
 import ProductIdInfo from '../components/ProductId/ProductIdInfo'
 import SliderImgs from '../components/ProductId/SliderImgs'
 import SimilarProducts from '../components/ProductId/SimilarProducts'
+import './styles/ProductId.css'
 
 const ProductId = () => {
 
-   const {id}  = useParams()
+  const { id } = useParams()
 
-   const url = `https://backend-ecommerce-ukji.onrender.com/products/${id}`
-   
+  const url = `https://backend-ecommerce-ukji.onrender.com/products/${id}`
+
   // `http://localhost:8080/products/${id}`
 
   const [product, getProductById] = useFetch(url)
@@ -20,20 +21,22 @@ const ProductId = () => {
     getProductById()
   }, [])
 
-  
+
 
   return (
-    <div>
-      <section>
-        <SliderImgs 
-        product = {product}
-        />
-        <ProductIdInfo 
-        product = {product}
-        />
-        <SimilarProducts 
-        product = {product}/>
-      </section>
+    <div className='productId'>
+      
+        <section className='productId__section'>
+          <SliderImgs
+            product={product}
+          />
+          <ProductIdInfo
+            product={product}
+          />
+        </section>
+        <SimilarProducts
+          product={product} />
+      
     </div>
   )
 }

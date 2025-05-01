@@ -1,0 +1,14 @@
+.Purchase-product {
+    display: flex;
+    margin: 0 auto;
+    max-width: 600px;
+    max-height: 200px;
+    gap: 0.2em;
+    padding: 5px 1em;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 10px;
+}
+.Purchase-product__img {
+    max-width: 200px;
+    object-fit: contain;
+}
