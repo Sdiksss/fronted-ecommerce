@@ -7,6 +7,11 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
-  allowedHosts: 'all'
+    allowedHosts: 'all'
+  },
+  preview: {
+    host: true,
+    port: 5173,
+    allowedHosts: 'all' // 👈 ¡Esto le da permiso explícito al comando preview en producción!
   }
 })
