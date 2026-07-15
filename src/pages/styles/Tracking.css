@@ -1,0 +1,357 @@
+/* ==========================================================================
+   CSS COMPLETO: MAPA CON CUADRÍCULA 8x8 Y SENTIDOS DE TRÁNSITO
+   ========================================================================== */
+
+.tracking-page-container {
+  margin-top: 2em;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1e293b;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.tracking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.subtitle-brand {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #2563eb;
+}
+
+.title-page {
+  font-size: 26px;
+  font-weight: 850;
+  color: #0f172a;
+  margin: 4px 0 0 0;
+}
+
+.subtitle-desc {
+  font-size: 13px;
+  color: #475569;
+  margin-top: 6px;
+}
+
+/* BOTONES */
+.control-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-algorithm-run {
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+}
+
+.btn-algorithm-run:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.btn-simulate {
+  background-color: #002a6d;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-reset-tracking {
+  background-color: #475569;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* FICHA MANIFIESTO */
+.package-manifest-card {
+  background-color: #002a6d;
+  border: 1px solid #052653;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.card-header-manifest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.manifest-title { font-size: 16px; font-weight: 700; margin: 0; }
+.manifest-id-badge { font-family: monospace; background-color: rgba(255, 255, 255, 0.15); padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+.manifest-data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; font-size: 13px; }
+.manifest-item span { color: #93c5fd; margin-right: 4px; }
+
+/* COMPROBACIÓN WHATSAPP */
+.alert-window-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 35px;
+  border-radius: 12px;
+}
+
+.alert-content-layout { display: flex; gap: 24px; align-items: flex-start; }
+.alert-icon-bell { font-size: 42px; background-color: rgba(245, 158, 11, 0.1); padding: 15px; border-radius: 50%; border: 1px solid rgba(245, 158, 11, 0.3); }
+.alert-text-wrapper { flex: 1; }
+.alert-tag-red { font-size: 10px; font-weight: 800; color: #ef4444; display: block; margin-bottom: 6px; }
+.alert-main-title { font-size: 22px; font-weight: 700; color: #ffffff; margin: 0 0 12px 0; }
+.alert-description-text { color: #cbd5e1; font-size: 13px; line-height: 1.5; }
+.action-buttons-flex { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+
+.btn-action { border: none; padding: 12px 20px; font-size: 12px; font-weight: 700; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+.btn-confirm { background-color: #10b981; color: #ffffff; }
+.btn-reprogram { background-color: #f59e0b; color: #ffffff; }
+.btn-local { background-color: #8b5cf6; color: #ffffff; }
+
+/* GRID DE SEGUIMIENTO */
+.tracking-main-layout { display: grid; grid-template-columns: 1fr; gap: 30px; }
+@media (min-width: 992px) { .tracking-main-layout { grid-template-columns: 1.2fr 0.8fr; } }
+
+.map-card-section, .timeline-card-section {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-header-map { display: flex; justify-content: space-between; align-items: center; }
+.card-title-light { font-size: 16px; font-weight: 700; color: #ffffff; margin: 0; }
+
+.badge-route-status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bg-status-green { background-color: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #34d399; }
+.bg-status-orange { background-color: rgba(245, 158, 11, 0.2); border: 1px solid #f59e0b; color: #fbbf24; }
+.bg-status-purple { background-color: rgba(139, 92, 246, 0.2); border: 1px solid #8b5cf6; color: #a78bfa; }
+
+.pulse-indicator { width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; animation: marker-pulse 1.8s infinite; }
+@keyframes marker-pulse { 0% { transform: scale(0.9); opacity: 1; } 50% { transform: scale(1.2); opacity: 0.5; } 100% { transform: scale(0.9); opacity: 1; } }
+
+/* ==========================================================================
+   NUEVO MAPA: GRID URBANO 8X8 REAL CON SENTIDOS DE VÍA
+   ========================================================================== */
+.grid-8x8-canvas {
+  width: 100%;
+  height: 400px;
+  background-color: #e2e8f0; /* Fondo gris plano tipo plano catastral */
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Calles Horizontales */
+.map-street-h {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+/* Calles Verticales */
+.map-street-v {
+  position: absolute;
+  top: 0;
+  width: 16px;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #cbd5e1;
+  border-right: 1px solid #cbd5e1;
+}
+
+/* Indicadores de sentido de tráfico */
+.street-indicator {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 20px;
+  white-space: nowrap;
+}
+
+.street-indicator-v {
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 25px;
+  text-align: center;
+}
+
+/* Colores de sentido de vías */
+.sentido-derecha { color: #3b82f6; }
+.sentido-izquierda { color: #1e3a8a; }
+.sentido-doble { color: #10b981; }
+.sentido-abajo { color: #ec4899; }
+.sentido-arriba { color: #7c3aed; }
+.sentido-v-doble { color: #f59e0b; }
+
+/* SVG overlay para dibujar la línea de ruta */
+.map-svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.animated-route-stroke {
+  animation: route-flow-line 15s linear infinite;
+}
+
+@keyframes route-flow-line { to { stroke-dashoffset: -30; } }
+
+/* MARCADORES EN INTERSECCIONES */
+.marker {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 5;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #334155;
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.delivery-truck {
+  font-size: 16px;
+  padding: 2px 4px;
+  background-color: transparent;
+  border: none;
+  z-index: 10;
+}
+
+/* POSICIONAMIENTO EN GRID (Coordenadas de simulación) */
+
+/* Ruta No Optimizada (Da vueltas por las manzanas) */
+.truck-long.step-grid-pos-4 { left: 10%; top: 92%; }
+.truck-long.step-grid-pos-5 { left: 44%; top: 44%; }
+.truck-long.step-grid-pos-6 { left: 80%; top: 20%; }
+
+/* Ruta Optimizada (Va directo usando las calles en el sentido correcto) */
+.truck-opt.step-grid-pos-4 { left: 20%; top: 80%; }
+.truck-opt.step-grid-pos-5 { left: 20%; top: 12%; }
+.truck-opt.step-grid-pos-6 { left: 80%; top: 20%; }
+
+/* PANELES DE EXCEPCIÓN */
+.map-overlay-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  color: #ffffff;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+}
+
+.panel-blue { background-color: rgba(15, 23, 42, 0.93); }
+.panel-orange { background-color: rgba(217, 119, 6, 0.95); }
+.panel-purple { background-color: rgba(124, 58, 237, 0.95); }
+
+.spinner-circle { width: 35px; height: 35px; border: 3px solid rgba(255, 255, 255, 0.1); border-top-color: #3b82f6; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.driver-info-box {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: rgba(15, 23, 42, 0.95);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 9px;
+  border: 1px solid #334155;
+  z-index: 6;
+}
+.driver-meta { margin: 1px 0; }
+
+/* MÉTRICAS */
+.map-metrics-footer { display: flex; gap: 12px; }
+.metric-box-sub { flex: 1; background-color: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 6px; display: flex; flex-direction: column; }
+.m-label { font-size: 10px; color: #64748b; font-weight: 700; text-transform: uppercase; }
+.m-value { font-size: 13px; font-weight: 700; color: #ffffff; margin-top: 3px; }
+.font-mono { font-family: monospace; color: #38bdf8; }
+.text-green-accent { color: #34d399; }
+.text-red-accent { color: #ef4444; }
+
+/* TIMELINE */
+.timeline-card-section { display: flex; flex-direction: column; gap: 16px; }
+.flow-vertical-timeline { display: flex; flex-direction: column; position: relative; padding-left: 10px; }
+.flow-vertical-timeline::before { content: ''; position: absolute; left: 22px; top: 12px; bottom: 12px; width: 2px; background-color: #334155; z-index: 1; }
+.timeline-step-row { display: flex; gap: 18px; padding-bottom: 24px; position: relative; z-index: 2; }
+.step-badge-icon { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; }
+
+.step-completed .step-badge-icon { background-color: #064e3b; color: #34d399; border: 1.5px solid #10b981; }
+.step-completed .step-title-text { color: #94a3b8; text-decoration: line-through; text-decoration-color: rgba(148, 163, 184, 0.4); }
+.step-completed .step-description-text { color: #64748b; }
+
+.step-active .step-badge-icon { background-color: #1e3a8a; color: #60a5fa; border: 1.5px solid #3b82f6; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3); }
+.step-active .step-title-text { color: #ffffff; font-weight: 700; }
+.step-active .step-description-text { color: #93c5fd; }
+
+.step-pending .step-badge-icon { background-color: #1e293b; color: #475569; border: 1.5px solid #334155; }
+.step-pending .step-title-text { color: #475569; }
+.step-pending .step-description-text { color: #334155; }
+
+.step-text-content { display: flex; flex-direction: column; }
+.step-title-text { margin: 0; font-size: 13px; }
+.step-description-text { margin: 3px 0 0 0; font-size: 11px; line-height: 1.4; }

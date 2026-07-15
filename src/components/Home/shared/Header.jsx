@@ -36,7 +36,7 @@ const Header = ({ inputValue, handleSearchName }) => {
 
                     >
                         {
-                            logged ? <li className='logout' onClick={logout}>logut</li> :
+                            logged ? <li className='logout' onClick={logout}>logout</li> :
                                 <>
                                     <li>
                                         <Link to='/login'>Login</Link>
@@ -44,6 +44,11 @@ const Header = ({ inputValue, handleSearchName }) => {
                                     <li>
                                         <Link to='/register'>Register</Link>
                                     </li>
+                                    <li>
+                                        <Link to='/aboutUs'>About us</Link>
+                                    </li>
+                        
+                                
                                     
                                     
                                 </>
@@ -58,6 +63,12 @@ const Header = ({ inputValue, handleSearchName }) => {
                                     </li>
                                     <li>
                                         <Link to='/purchases'>Compras</Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/aboutUs'>About us</Link>
+                                    </li>
+                                      <li>
+                                        <Link to='/Tracking'>Tracking</Link>
                                     </li>
                                 </>
                             )

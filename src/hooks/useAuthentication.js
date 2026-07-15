@@ -8,8 +8,8 @@ const useAuthentication = () => {
 
 
     const createNewUser = data => {
-        const url = 'https://backend-ecommerce-ukji.onrender.com/users'
-        //'http://localhost:8080/users'
+        const url = 
+        'https://backend-ecommerce-6e8l.onrender.com/users'
         axios.post(url, data)
             .then(res => {
                 const loginData = {
@@ -22,8 +22,7 @@ const useAuthentication = () => {
             .catch(err => console.log(err))
     }
     const loginUser = data => {
-        const url = 'https://backend-ecommerce-ukji.onrender.com/users/login'
-        //`http://localhost:8080/users/login`
+        const url =    `https://backend-ecommerce-6e8l.onrender.com/users/login`
     axios.post(url, data)
         .then(res => {
             console.log(res.data)

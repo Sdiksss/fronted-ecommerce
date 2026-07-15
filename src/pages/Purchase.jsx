@@ -12,9 +12,9 @@ const Purchase = () => {
     },[])
 
     return (
-    <div className='purchase'>
+    <div className='purchase-page'>
         <h2>Purchases</h2>
-        <div>
+        <div className='purchases-items'>
             {
                 purchases?.map(prod => (
                     <PurchaseCard

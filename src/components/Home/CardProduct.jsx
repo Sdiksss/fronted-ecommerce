@@ -24,20 +24,21 @@ const CardProduct = ({ product }) => {
     return (
         <article className='product' onClick={handleSelectProduct}>
             <header className='product__header'>
-                <img className='product__img product__img1' src={product.images[0].url} alt="" />
-                <img className='product__img product__img2' src={product.images[1].url} alt="" />
+                <img className='product__img product__img1' src={product.images[0]?.url} alt="" />
+                <img className='product__img product__img2' src={product.images[1]?.url} alt="" />
         
             </header>
 
             <section className='product__section'>
                 
                 <h3 className='product__title'>{product.title}</h3>
-                <div>
+                <div className='product_rating'>
                 <i className='bx bxs-star'></i>
                 <i className='bx bxs-star'></i>
                 <i className='bx bxs-star'></i>
                 <i className='bx bxs-star'></i>
-                <i className='bx bxs-star-half' ></i> <span>4.5</span> 
+                <i className='bx bxs-star-half' ></i> 
+                <span className='product_rating-number'>4.5</span> 
         
                 </div>
             </section>

@@ -27,13 +27,13 @@ const Login = () => {
 
         <div className='login-body'>
             <div className='login-account'>
-                <h2>Welcome back</h2>
+                <h2 className='login-title'>Welcome back</h2>
                 <p>Login with your Google account</p>
                 <div className='login-google'>
                     <i className='bx bxl-google' ></i> Login with Google
                 </div>
                 <div className='line-continue'>
-                    <span>Or continue with</span>
+                    <span className='login-or'>Or continue with</span>
                 </div>
 
             </div>

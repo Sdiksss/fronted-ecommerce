@@ -7,8 +7,8 @@ import './styles/SimilarProducts.css'
 
 const SimilarProducts = ({ product }) => {
 
-    const url = `https://backend-ecommerce-ukji.onrender.com/products?categoryId=${product?.categoryId}`
-    //`http://localhost:8080/products?categoryId=${product?.categoryId}`
+    const url = 
+    `http://localhost:8080/products?categoryId=${product?.categoryId}`
 
     const [FilterProducts, getProductsByCategory] = useFetch(url)
 
@@ -20,8 +20,8 @@ const SimilarProducts = ({ product }) => {
 
     return (
         <section>
-            <h2>Similar products</h2>
-            <div className='similar--products'>
+            <h2 className='sim--products__title'>Similar products</h2>
+            <div className='sim--products__body'>
                 {
                     FilterProducts?.results.map(prod => {
                         if (prod.id !== product.id)

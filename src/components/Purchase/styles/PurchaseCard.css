@@ -2,13 +2,24 @@
     display: flex;
     margin: 0 auto;
     max-width: 600px;
-    max-height: 200px;
-    gap: 0.2em;
+    max-height: 150px;
+    gap: 0.5em;
     padding: 5px 1em;
     border: 1px solid rgb(175, 175, 175);
     border-radius: 10px;
+    width: 90%;
 }
 .Purchase-product__img {
     max-width: 200px;
     object-fit: contain;
+}
+.Purchase-product__title{
+
+}
+
+.Purchase-product__summary {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 0.4em;
 }

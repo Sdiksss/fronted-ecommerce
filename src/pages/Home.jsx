@@ -69,16 +69,18 @@ const Home = ({ inputValue }) => {
                         <FilterCategory />
                     </aside>
 
-                    <div className='products__container'>
-                        {
-                            productsGlobal?.results.filter(callBackFilter).filter(cbFilterPrice).map(product => (
-                                <CardProduct
-                                    key={product.id}
-                                    product={product}
-                                />
-                            ))
-                        }
-                    </div>
+                   <div className='products__container'>
+    {
+        // 1. Agregamos "?." antes de filter para proteger contra undefined
+        // 2. Agregamos "|| []" al final como fallback seguro
+        (productsGlobal?.results?.filter(callBackFilter).filter(cbFilterPrice) || []).map(product => (
+            <CardProduct
+                key={product.id}
+                product={product}
+            />
+        ))
+    }
+</div>
 
                 </div>
 

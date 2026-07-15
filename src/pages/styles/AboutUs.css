@@ -1,0 +1,399 @@
+/* ==========================================================================
+   VARIABLES GLOBALES Y RESET DE ESTILO TIPO DASHBOARD (FONDO CLARO)
+   ========================================================================== */
+.dashboard-container {
+  margin-top: 3em;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000fb;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.dashboard-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 24px;
+}
+
+.dashboard-header .subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #3b82f6;
+  text-transform: uppercase;
+}
+
+.dashboard-header .title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin: 6px 0 0 0;
+}
+
+/* TARJETAS DE MÉTRICAS */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  background-color: #002a6d;
+  border: 1px solid #052653;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.metric-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 8px 0;
+}
+
+.metric-value.text-medium {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.metric-sub {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text-red { color: #ef4444; }
+.text-slate { color: #94a3b8; }
+
+/* Estado del Sistema */
+.status-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+.status-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #34d399;
+  margin: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
+}
+
+/* BLOQUE PRINCIPAL (GRID DOS COLUMNAS) */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.section-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-size: 12px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+.btn-reset {
+  background-color: #334155;
+  color: #f1f5f9;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-reset:hover { background-color: #475569; }
+
+/* TABLA DEL CHECK-SHEET */
+.table-responsive { overflow-x: auto; }
+.check-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+.check-table th { background-color: #0f172a; color: #94a3b8; padding: 12px; font-weight: 600; text-transform: uppercase; font-size: 11px; }
+.check-table td { padding: 12px; border-bottom: 1px solid #334155; }
+.check-table tbody tr:hover { background-color: #1e293b; }
+
+.col-category { font-weight: 500; color: #e2e8f0; max-width: 250px; }
+.col-tally { font-family: 'Courier New', Courier, monospace; color: #34d399; letter-spacing: 2px; font-weight: bold; background-color: rgba(15, 23, 42, 0.4); }
+.col-freq { font-weight: 700; color: #ffffff; }
+.text-center { text-align: center; }
+
+.btn-add {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-add:hover { background-color: #3b82f6; }
+
+/* TOGGLE CONTAINER PARA FLOWCHART */
+.toggle-container { background-color: #0f172a; padding: 4px; border-radius: 8px; display: flex; gap: 4px; }
+.toggle-btn { background: none; border: none; color: #94a3b8; padding: 6px 12px; font-size: 12px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+.active-red { background-color: #dc2626; color: #ffffff !important; }
+.active-green { background-color: #059669; color: #ffffff !important; }
+
+/* CONTENIDO DE FLOWCHARTS / TIMELINE */
+.flowchart-content { border-left: 3px solid; padding-left: 20px; margin-top: 16px; }
+.border-red { border-color: #b91c1c; }
+.border-green { border-color: #047857; }
+.badge-wrapper { padding: 12px; border-radius: 8px; margin-bottom: 20px; }
+.bg-red-dark { background-color: rgba(127, 29, 29, 0.2); border: 1px solid rgba(185, 28, 28, 0.3); }
+.bg-green-dark { background-color: rgba(6, 78, 59, 0.2); border: 1px solid rgba(4, 120, 87, 0.3); }
+
+.badge { font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+.bg-red-dark .badge { background-color: #7f1d1d; color: #fca5a5; }
+.bg-green-dark .badge { background-color: #064e3b; color: #6ee7b7; }
+.badge-text { font-size: 12px; color: #cbd5e1; margin: 6px 0 0 0; line-height: 1.4; }
+
+/* LÍNEA DE TIEMPO (TIMELINE) */
+.timeline { display: flex; flex-direction: column; gap: 20px; }
+.timeline-item { position: relative; }
+.timeline-item::before { content: ''; position: absolute; left: -26px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background-color: #1e293b; border: 2px solid; }
+.timeline-red .timeline-item::before { border-color: #ef4444; }
+.timeline-green .timeline-item::before { border-color: #10b981; }
+.timeline-title { font-size: 14px; font-weight: 700; color: #ffffff; margin: 0 0 4px 0; }
+.timeline-desc { font-size: 12px; color: #94a3b8; margin: 0; line-height: 1.4; }
+
+/* ==========================================================================
+   DISEÑO ARQUITECTÓNICO MEJORADO PARA EL FLUJOGRAMA INTERACTIVO (FIGURA 2)
+   ========================================================================== */
+.flowchart-wrapper-section {
+  margin-top: 32px;
+}
+
+.canvas-container {
+  background-color: #f8fafc; /* Fondo gris claro idéntico al papel de Eraser */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+/* LEYENDA DE SÍMBOLOS */
+.canvas-legend {
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.legend-title {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.legend-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.symbol-box {
+  width: 32px;
+  height: 14px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.sym-green  { background-color: #d1fae5; border: 1.5px solid #10b981; }
+.sym-yellow { background-color: #fef3c7; border: 1.5px solid #f59e0b; }
+.sym-pink   { background-color: #fce7f3; border: 1.5px solid #ec4899; }
+.sym-blue   { background-color: #dbeafe; border: 1.5px solid #3b82f6; }
+.sym-red    { background-color: #fee2e2; border: 1.5px solid #ef4444; }
+
+/* MAQUETACIÓN EN PARALELO ESTILO ERASER (DOS COLUMNAS SÉCTRICAS) */
+.eraser-chart-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .eraser-chart-layout {
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+.chart-main-column, .chart-side-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+}
+
+/* CAJAS DE NODOS */
+.flow-node {
+  width: 100%;
+  padding: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: #0f172a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.node-green { background-color: #d1fae5; border: 1.5px solid #10b981; border-radius: 24px; }
+.node-yellow { background-color: #fef3c7; border: 1.5px solid #f59e0b; border-radius: 6px; }
+.node-blue { background-color: #dbeafe; border: 1.5px solid #3b82f6; border-radius: 6px; }
+.node-purple { background-color: #ede9fe; border: 1.5px solid #8b5cf6; border-radius: 6px; }
+.node-red { background-color: #fee2e2; border: 1.5px solid #ef4444; border-radius: 6px; }
+
+/* Formato Rombo Compacto */
+.node-pink {
+  background-color: #fce7f3;
+  border: 1.5px solid #ec4899;
+  border-radius: 14px;
+  padding: 16px 12px;
+}
+
+/* LÍNEAS DE CONEXIÓN VERTICALES CON PUNTA DE FLECHA */
+.flow-line-vertical {
+  width: 2px;
+  height: 28px;
+  background-color: #64748b;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.flow-line-vertical::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #64748b transparent transparent transparent;
+}
+
+/* INDICADORES CONDICIONALES INTERNOS (SÍ / NO) */
+.arrow-text-yes {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #059669;
+  background: #f8fafc;
+  padding: 0 2px;
+}
+
+/* CONTENEDOR DE EXCEPCIONES LATERALES */
+.side-block-group {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.border-dashed-red { border: 1px dashed #fca5a5; }
+.border-dashed-yellow { border: 1px dashed #fcd34d; }
+
+.side-conditional-tag {
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.text-yellow { color: #b45309; }
+
+/* LAZO DE REINTENTO ALTERNATIVO */
+.re-attempt-line {
+  margin-top: 12px;
+  width: 80%;
+  border-bottom: 2px dashed #ef4444;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: #ef4444;
+  padding-bottom: 2px;
+}
+
+.mt-10 { margin-top: 10px; }

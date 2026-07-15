@@ -21,7 +21,7 @@ const Register = () => {
     return (
         <div className="register-container">
             <div className="register-account">
-                <h2>Create a new user</h2>
+                <h2 className='register-title'>Create a new user</h2>
                 <form className="register-form" onSubmit={handleSubmit(submit)}>
                     <div className="register-form__input-div">
                         <label htmlFor="firstName">First Name</label>

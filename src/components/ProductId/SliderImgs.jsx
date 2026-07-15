@@ -7,9 +7,14 @@ const SliderImgs = ({ product }) => {
   const [indexImg, setIndexImg] = useState()
 
   const styleMovible = {
-    transform: `translateX(calc( (-${indexImg}/ 2) * 100% ))`
+    transform: `translateX(calc( (-${indexImg} /  ${product?.images.length}) * 100% ))`,
+    width: `${product?.images.length*100}%`
+  }
+  const imageMovible = {
+  
   }
 
+  console.log(indexImg)
 
   const handlePrevious = () => {
     if (indexImg > 0) {
@@ -21,12 +26,12 @@ const SliderImgs = ({ product }) => {
   }
 
   const handleNext = () => {
-    if (indexImg < 1) {
-      setIndexImg(indexImg + 1)
+    if (indexImg <  product?.images.length - 1) {
+      setIndexImg(indexImg + 1);
     } else {
-      setIndexImg(0)
+      setIndexImg(0); // vuelve al inicio
     }
-  }
+  };
 
   console.log(indexImg)
 
@@ -37,11 +42,12 @@ const SliderImgs = ({ product }) => {
       <div className='slider-body' >
         <button
           onClick={handlePrevious}
-          className='slider__btn slider__left'>&lt;</button>
+          className='slider__btn slider__left'>&lt;
+        </button>
         <div style={styleMovible} className='slider__movible'>
           {
             product?.images.map(imgInfo => (
-              <div  className='slider__img-container' key={imgInfo.id}>
+              <div  style={imageMovible} className='slider__img-container' key={imgInfo.id}>
                 <img className='slider__img' src={imgInfo.url} alt="" />
               </div>
             ))
@@ -49,7 +55,8 @@ const SliderImgs = ({ product }) => {
         </div>
         <button
           onClick={handleNext}
-          className='slider__btn slider__right'>&gt;</button>
+          className='slider__btn slider__right'>&gt;
+        </button>
       </div>
       <div className='slider__footer' >
           {

@@ -1,14 +1,13 @@
 .header-container {
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
     padding: 0.5em 1em 0.1em 1em;
     background: white;
-    flex-direction: column;
     position: fixed;
     z-index: 10;
     height: 60px;
+    
+    
 
 }
 .header-principal {
@@ -16,10 +15,13 @@
     display: flex;
     gap: 2em;
     align-items: center;
+    margin: 0 auto;
+    max-width: 1300px;
 }
 .header-secondary {
     display: flex;
     justify-content: center;
+    max-width: 1300px;
 
 }
 .header__h1 a {

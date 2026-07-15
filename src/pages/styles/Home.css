@@ -35,6 +35,8 @@
     align-items: center;
     background: white;
     border-radius: 0.2em;
+
+    position: relative;
     
 }
 
@@ -65,14 +67,23 @@
     transition: ease 300ms;
     background: white;
     height: 100vh;
+    top: 60px;
 }
 
-.close-filters {
+.close-filters, .i  {
+    display: grid;
+    place-items: center;
     position: absolute;
     right: 1em;
     top: 1em;
-    font-weight: 500;
-    font-size: 1.2em;
+    height: 25px;
+    width: 25px;
+    line-height: 1;
+    background: none;
+}
+.close-filters i {
+    color: white;
+    font-size: 2em;
     color: blue;
 }
 

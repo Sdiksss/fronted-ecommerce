@@ -13,11 +13,9 @@ export const {setProductsGlobal} = productsSlice.actions;
 
 export default productsSlice.reducer;
 
-//Peticion
+//Peticion   https://backend-ecommerce-6e8l.onrender.com
 
-const defaultUrl = 'https://backend-ecommerce-ukji.onrender.com/products'
-
-//`http://localhost:8080/products` 
+const defaultUrl = `https://backend-ecommerce-6e8l.onrender.com/` 
 
 export const getAllProductsThunk = (url = defaultUrl) => dispatch => {
     axios.get(url)

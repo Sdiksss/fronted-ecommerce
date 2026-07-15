@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import productsGlobal from './slices/products.slice'
-import cartGlobal from './slices/cart.slice'
+import cart from './slices/cart.slice'
+import loginModal from './slices/loginModal.slice'
 
 const store =  configureStore ({
     reducer: {
         productsGlobal,
-        cartGlobal
+        cart,
+        loginModal
 
 
     }

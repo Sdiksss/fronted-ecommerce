@@ -1,4 +1,78 @@
 .carPage-body {
     padding-top: 70px;
-    margin: 0 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding-bottom: 200px;
+}
+
+
+.cartPage-footer {
+    border: 1px solid #000000;
+    border-radius: 0.5em;
+    max-height: 200px;
+    padding:  0.5em;
+    display: grid;
+    width: 300px;
+        box-sizing: border-box;
+}
+
+.cartPage-info {
+    padding: 0 1em;
+    
+}
+.cartPage-summary {
+    margin-bottom: 16px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.cartPage-purchase_cost {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+
+.cartPage_btn-purchase {
+    height: 35px;
+    background: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 1em;
+    width: 100%;
+
+}
+.cartPage__buyer-protection{
+    padding: 0 1em;
+}
+.cartPage__buy-protect-title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+.cartPage__buy-protect-description{
+    font-size: 12px;
+     font-weight: 500;
+}
+
+@media (max-width: 780px) {
+    .carPage-body {
+    flex-direction: column;
+}
+.cartPage-footer {
+    position: fixed;
+    width: 100%;
+    background: white;
+    border-radius: 0;
+      border: none;         
+  border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    bottom: 0;
+
+}
+.cartPage__buyer-protection{
+    display: none;
+}
+    
 }

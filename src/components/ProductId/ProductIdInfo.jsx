@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { postCartThunk } from '../../store/slices/cart.slice'
 import { useDispatch } from 'react-redux'
 import './styles/ProductIdInfo.css'
+import { useNavigate } from 'react-router-dom'
 
 const ProductIdInfo = ({ product }) => {
 
@@ -16,12 +17,17 @@ const ProductIdInfo = ({ product }) => {
             setQuantity(quantity - 1)
         }
     }
+   
 
     const dispatch = useDispatch()
 
     const handleAddCart = () => {
+    
         dispatch(postCartThunk(product, quantity))
     }
+
+
+
 
     return (
         <section className='productId-I'>
@@ -32,9 +38,9 @@ const ProductIdInfo = ({ product }) => {
                     <span>S/ </span>
                     <span>{product?.price}</span>
                 </div>
-                <div>
-                    <span>stock</span>
-                    <span>{product?.stock}</span>
+                <div className='productId-I__ftr-stock'>
+                    <span> • En stock</span>
+                    <span> &mdash; {product?.stock}  unidades</span>
                 </div>
                 <div className='productId-rating'>
                     <i className='bx bxs-star'></i>
@@ -44,13 +50,16 @@ const ProductIdInfo = ({ product }) => {
                     <i className='bx bxs-star-half' ></i> <span>4.5</span>
 
                 </div>
-                <hr className="divider" />
+                <div className='productId-buyItem'>
+
                 <div className='productId-quantity'>
                     <button className='productId-quantity__minus' onClick={handleQuantityMinus} >-</button>
                     <div>{quantity}</div>
                     <button className='productId-quantity__add' onClick={handleQuantityAdd}>+</button>
                 </div>
                 <button className='productId-addCart' onClick={handleAddCart}>Añadir al carrito <i className='bx bx-cart'></i></button>
+
+                </div>
             </footer>
         </section>
     )

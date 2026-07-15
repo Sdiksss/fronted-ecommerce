@@ -8,32 +8,33 @@ const CartElement = ({ productCart }) => {
     const dispatch = useDispatch()
 
     const handleDelete = () => {
-        dispatch(deleteCartThunk(productCart.id) )
+        dispatch(deleteCartThunk(productCart.id))
     }
 
     console.log(productCart)
 
     return (
         <article className='cartPage-product'>
-            <header>
-                <img src={productCart?.product.images[0].url} alt="" />
+            <header className="cartPage-product__header">
+                <img src={productCart?.product.images[0]?.url} alt={productCart?.product.title} />
             </header>
-            <section>
+
+            <section className="cartPage-product__body">
                 <h3>{productCart?.product.title}</h3>
                 <p>
-                    <span>{productCart?.quantity} </span>
-                    x
-                    <span>{productCart?.product.price}</span>
+                    <span>{productCart?.quantity}</span> x <span>S/ {productCart?.product.price}</span>
                 </p>
-                <button onClick={handleDelete}>
-                    <i style={{fontSize: '2rem', cursor: 'pointer'}} className='bx bx-trash'></i>
-                </button>
             </section>
-            <footer>
-                <span> subtotal </span><span>{productCart?.quantity * productCart?.product.price }</span>
-                <span>  </span>
+
+            <footer className="cartPage-product__footer">
+                <span>Subtotal</span>
+                <span>S/ {productCart?.quantity * productCart?.product.price}</span>
+                <button onClick={handleDelete}>
+                    <i style={{ fontSize: '1.5rem' }} className='bx bx-trash'></i>
+                </button>
             </footer>
         </article>
+
     )
 }
 

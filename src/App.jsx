@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import { getAllProductsThunk } from './store/slices/products.slice'
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,6 +12,9 @@ import CartPage from './pages/CartPage'
 import { getCartThunk } from './store/slices/cart.slice'
 import Purchase from './pages/Purchase'
 import ProtectedRoutes from './pages/ProtectedRoutes'
+
+import AboutUs from './pages/AboutUs'
+import Tracking from './pages/Tracking'
 function App() {
 
   const dispatch = useDispatch()
@@ -31,12 +34,21 @@ function App() {
   }
 
 
+  const location = useLocation()
+  const noHeaderRoutes = ['/login', '/register']
+
+  const isHeaderVisible = !noHeaderRoutes.includes(location.pathname)
+  console.log(isHeaderVisible)
+
   return (
     <div className='container'>
-      <Header
+      {isHeaderVisible && (
+        <Header
         inputValue={inputValue}
         handleSearchName={handleSearchName}
       />
+      )}
+      
       <div className='body'>
 
         <Routes>
@@ -48,6 +60,10 @@ function App() {
           <Route path='/product/:id' element={<ProductId />} />
           <Route path='/login' element={<Login />} />
           <Route path='register' element={<Register />} />
+
+
+          <Route path='aboutUs' element={<AboutUs />} />
+           <Route path='Tracking' element={<Tracking />} />
 
           <Route element={<ProtectedRoutes />}>
             <Route path='/cart' element={<CartPage />} />
