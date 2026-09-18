@@ -7,6 +7,8 @@ import SliderImgs from '../components/ProductId/SliderImgs'
 import SimilarProducts from '../components/ProductId/SimilarProducts'
 import './styles/ProductId.css'
 import Specs from '../components/ProductId/Specs'
+import { baseUrl } from "../services/constants";
+
 
 const ProductId = () => {
 
@@ -15,7 +17,7 @@ const ProductId = () => {
   //https://backend-ecommerce-6e8l.onrender.com/products/2
   //http://localhost:8080/products/
 
-  const url = `http://localhost:8080/products/${id}`
+  const url = `${baseUrl}/products/${id}`
 
   const [product, getProductById] = useFetch(url)
 

@@ -3,6 +3,7 @@ import getConfigAuth from "../utils/getConfigAuth"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { setCartGlobal } from "../store/slices/cart.slice"
+import {baseUrl} from "../services/constants"
 
 
 const usePurchase = () => {
@@ -11,8 +12,7 @@ const usePurchase = () => {
 
     const [purchases, setPurchases] = useState()
 
-    const url = 
-    'https://backend-ecommerce-6e8l.onrender.com/purchaseItems'
+    const url = `${baseUrl}/purchaseItems`
 
     const getAllPurchases = () => {
         axios.get(url, getConfigAuth())

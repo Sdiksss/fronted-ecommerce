@@ -10,7 +10,9 @@ const CartPage = () => {
   
   const dispatch = useDispatch()
 
-  const cart = useSelector(states => states.cartGlobal)
+  const cart = useSelector(states => states.cart)
+
+  console.log(cart)
 
   const totalPrice = cart?.reduce((acc, cv) => {
     const subTotal = cv.quantity * cv.product.price

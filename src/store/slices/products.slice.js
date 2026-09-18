@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from 'axios'
+import { baseUrl } from "../../services/constants";
 
 const productsSlice = createSlice({
     name: 'products',
@@ -13,9 +14,8 @@ export const {setProductsGlobal} = productsSlice.actions;
 
 export default productsSlice.reducer;
 
-//Peticion   https://backend-ecommerce-6e8l.onrender.com
 
-const defaultUrl = `https://backend-ecommerce-6e8l.onrender.com/` 
+const defaultUrl = `${baseUrl}/products` 
 
 export const getAllProductsThunk = (url = defaultUrl) => dispatch => {
     axios.get(url)

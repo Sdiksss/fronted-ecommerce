@@ -1,0 +1,1 @@
+export const baseUrl = 'https://backend-ecommerce-6e8l.onrender.com';
